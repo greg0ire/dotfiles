@@ -1,5 +1,4 @@
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+call pathogen#infect()
 syntax on
 set softtabstop=2 
 set shiftwidth=2
