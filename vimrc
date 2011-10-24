@@ -11,3 +11,5 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 colorscheme solarized
 filetype on
 filetype plugin on
+set wildmode=longest,list,full
+set wildmenu
