@@ -22,7 +22,7 @@ export ZSH_THEME="random"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn)
+plugins=(git svn extract)
 
 source $ZSH/oh-my-zsh.sh
 
