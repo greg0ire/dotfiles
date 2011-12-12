@@ -13,3 +13,5 @@ filetype on
 filetype plugin on
 set wildmode=longest,list,full
 set wildmenu
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*.swp
+let g:ctrlp_working_path_mode = 2
