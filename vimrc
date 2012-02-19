@@ -19,3 +19,4 @@ set wildmode=longest,list,full
 set wildmenu
 set wildignore+=*/.hg/*,*/.svn/*,*.so,*.swp,.project,.buildpath,*/.sass-cache/*,cache,log
 let g:ctrlp_working_path_mode = 2
+inoremap jj <Esc>
