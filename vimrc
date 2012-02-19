@@ -1,8 +1,8 @@
 call pathogen#infect()
 syntax on
-set softtabstop=2 
-set shiftwidth=2
-set tabstop=2
+set softtabstop=4
+set shiftwidth=4
+set tabstop=4
 set expandtab
 set number
 let g:solarized_termtrans=1
@@ -20,3 +20,4 @@ set wildmenu
 set wildignore+=*/.hg/*,*/.svn/*,*.so,*.swp,.project,.buildpath,*/.sass-cache/*,cache,log
 let g:ctrlp_working_path_mode = 2
 inoremap jj <Esc>
+autocmd FileType less,sass,yml,css,html,php autocmd BufWritePre <buffer> :%s/\s\+$//e

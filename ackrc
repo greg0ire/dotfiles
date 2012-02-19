@@ -1,0 +1,6 @@
+--type-set
+yml=.yml,.yaml
+--type-set
+style=.css,.less,.sass
+--type-set
+tpl=.twig
