@@ -17,5 +17,5 @@ filetype on
 filetype plugin on
 set wildmode=longest,list,full
 set wildmenu
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*.swp,.project,.buildpath,*/.sass-cache/*,cache,log
+set wildignore+=*/.hg/*,*/.svn/*,*.so,*.swp,.project,.buildpath,*/.sass-cache/*,cache,log
 let g:ctrlp_working_path_mode = 2
