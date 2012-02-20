@@ -19,4 +19,5 @@ set wildmode=longest,list,full
 set wildmenu
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*.swp,.project,.buildpath,*/.sass-cache/*,cache,log
 let g:ctrlp_working_path_mode = 2
+let g:ctrlp_follow_symlinks=1
 autocmd FileType less,sass,yml,css,html,php autocmd BufWritePre <buffer> :%s/\s\+$//e
