@@ -4,3 +4,5 @@ yml=.yml,.yaml
 style=.css,.less,.sass
 --type-set
 tpl=.twig
+--type-set
+i18n=.xliff,.xml
