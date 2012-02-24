@@ -21,5 +21,5 @@ let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|\.project$\|\.buildpath$\|\.
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_follow_symlinks=1
 inoremap jj <Esc>
-autocmd FileType less,sass,yml,css,html,php autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType less,sass,yml,css,html,php,twig autocmd BufWritePre <buffer> :%s/\s\+$//e
 set grepprg=ack-grep
