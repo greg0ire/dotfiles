@@ -17,7 +17,7 @@ filetype on
 filetype plugin on
 set wildmode=longest,list,full
 set wildmenu
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|\.project$\|\.buildpath$\|\.sass-cache$'
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|\.project$\|\.buildpath$\|\.sass-cache$\|cache$\|log$'
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_follow_symlinks=1
 inoremap jj <Esc>
