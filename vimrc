@@ -23,3 +23,4 @@ let g:ctrlp_follow_symlinks=1
 inoremap jj <Esc>
 autocmd FileType less,sass,yml,css,html,php,twig autocmd BufWritePre <buffer> :%s/\s\+$//e
 set grepprg=ack-grep\ --ignore-dir\ cache
+let php_noShortTags=1
