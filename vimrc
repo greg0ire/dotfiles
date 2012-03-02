@@ -24,3 +24,5 @@ inoremap jj <Esc>
 autocmd FileType less,sass,yml,css,html,php,twig autocmd BufWritePre <buffer> :%s/\s\+$//e
 set grepprg=ack-grep\ --ignore-dir\ cache
 let php_noShortTags=1
+set makeprg=php\ -ln\ %
+set errorformat=%m\ in\ %f\ on\ line\ %l
