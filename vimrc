@@ -26,3 +26,4 @@ set grepprg=ack-grep\ --ignore-dir\ cache
 let php_noShortTags=1
 set makeprg=php\ -ln\ %
 set errorformat=%m\ in\ %f\ on\ line\ %l
+cabbr <expr> %% expand('%:p:h')
