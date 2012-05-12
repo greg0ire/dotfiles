@@ -31,5 +31,4 @@ cabbr <expr> %% expand('%:p:h')
 set ignorecase
 set smartcase
 set incsearch
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+set cc=80
