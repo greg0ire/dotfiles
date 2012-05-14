@@ -30,3 +30,4 @@ cabbr <expr> %% expand('%:p:h')
 set ignorecase
 set smartcase
 set incsearch
+set autoindent
