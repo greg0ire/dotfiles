@@ -18,11 +18,12 @@ filetype plugin on
 set wildmode=longest,list,full
 set wildmenu
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|\.project$\|\.buildpath$\|\.sass-cache$\|cache$\|log$'
-let g:ctrlp_working_path_mode = 0
+let g:ctrlp_working_path_mode = 2
 let g:ctrlp_follow_symlinks=1
+let g:ctrlp_user_command = ['.git/', 'for i in %s/**/.git; do; a=${i:0:${#i}-4};b=`echo $a|sed -e "s/\//\\\\\\\\\//g"`;git --git-dir=$a/.git ls-files -oc --exclude-standard |sed -e "s/^/$b/"; done']
 inoremap jj <Esc>
 autocmd FileType less,sass,yml,css,html,php,twig autocmd BufWritePre <buffer> :%s/\s\+$//e
-set grepprg=ack-grep\ --ignore-dir=cache\ --ignore-dir=.rsync_cache
+set grepprg=ack\ --ignore-dir\ cache\ --follow
 let php_noShortTags=1
 set makeprg=php\ -ln\ %
 set errorformat=%m\ in\ %f\ on\ line\ %l
@@ -30,3 +31,16 @@ cabbr <expr> %% expand('%:p:h')
 set ignorecase
 set smartcase
 set incsearch
+set autoindent
+set cc=80
+let g:dbgPavimPort = 9009
+let g:dbgPavimBreakAtEntry = 0
+
+let g:php_cs_fixer_path = "~/bin/php-cs-fixer.phar" " define the path to the php-cs-fixer.phar
+let g:php_cs_fixer_level = "all"                " which level ?
+let g:php_cs_fixer_config = "default"           " configuration
+let g:php_cs_fixer_php_path = "php"             " Path to PHP
+let g:php_cs_fixer_fixers_list = ""             " List of fixers
+let g:php_cs_fixer_enable_default_mapping = 1   " Enable the mapping by default (<leader>pcd)
+let g:php_cs_fixer_dry_run = 0                  " Call command with dry-run option
+let g:php_cs_fixer_verbose = 0                  " Return the output of command if 1, else an inline information.
