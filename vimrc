@@ -62,3 +62,13 @@ let g:php_cs_fixer_fixers_list = ""             " List of fixers
 let g:php_cs_fixer_enable_default_mapping = 1   " Enable the mapping by default (<leader>pcd)
 let g:php_cs_fixer_dry_run = 0                  " Call command with dry-run option
 let g:php_cs_fixer_verbose = 0                  " Return the output of command if 1, else an inline information.
+
+" disable noob keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
