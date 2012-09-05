@@ -32,7 +32,10 @@ filetype on
 filetype plugin on
 set wildmode=longest,list,full
 set wildmenu
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|\.project$\|\.buildpath$\|\.sass-cache$\|cache$\|log$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/](\.git|\.hg|\.svn|\.settings|\.sass-cache|cache|log)$',
+  \ 'file': '.un\~$\|.project$\|.buildpath',
+  \ }
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_follow_symlinks=1
 let g:ctrlp_user_command = ['.git/', 'for i in %s/**/.git; do; a=${i:0:${#i}-4};b=`echo $a|sed -e "s/\//\\\\\\\\\//g"`;git --git-dir=$a/.git ls-files -oc --exclude-standard |sed -e "s/^/$b/"; done']
