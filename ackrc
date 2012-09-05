@@ -3,6 +3,8 @@ yml=.yml,.yaml
 --type-set
 style=.css,.less,.sass,.scss
 --type-set
+prestyle=.less,.sass,.scss
+--type-set
 tpl=.twig
 --type-set
 i18n=.xliff,.xml
