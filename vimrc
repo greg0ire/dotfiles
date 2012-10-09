@@ -1,9 +1,11 @@
 call pathogen#infect()
 set nocompatible
 syntax on
+
 set softtabstop=4
 set shiftwidth=4
 set tabstop=4
+
 set modelines=0
 set encoding=utf-8
 set scrolloff=3
@@ -32,6 +34,7 @@ filetype on
 filetype plugin on
 set wildmode=longest,list,full
 set wildmenu
+
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/](\.git|\.hg|\.svn|\.settings|\.sass-cache|cache|log)$',
   \ 'file': '.un\~$\|.project$\|.buildpath',
@@ -42,15 +45,19 @@ let g:ctrlp_user_command = ['.git/', 'for i in %s/**/.git; do; a=${i:0:${#i}-4};
 inoremap jj <Esc>
 autocmd FileType less,sass,yml,css,html,php,twig autocmd BufWritePre <buffer> :%s/\s\+$//e
 set grepprg=ack\ --ignore-dir\ cache\ --follow
+
+" php related stuff
 let php_noShortTags=1
 set makeprg=php\ -ln\ %
 set errorformat=%m\ in\ %f\ on\ line\ %l
+
 cabbr <expr> %% expand('%:p:h')
 set ignorecase
 set smartcase
 set incsearch
 set autoindent
 set cc=80
+
 let g:dbgPavimPort = 9009
 let g:dbgPavimBreakAtEntry = 0
 
