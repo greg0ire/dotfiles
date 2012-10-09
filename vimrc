@@ -36,8 +36,8 @@ set wildmode=longest,list,full
 set wildmenu
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](\.git|\.hg|\.svn|\.settings|\.sass-cache|cache|log)$',
-  \ 'file': '.un\~$\|.project$\|.buildpath',
+  \ 'dir': '\v[\/](\.git|\.hg|\.svn|\.settings|\.sass-cache|cache|log|.rsync_cache)$',
+  \ 'file': '.un\~$\|.project$\|.buildpath$\|composer.phar$',
   \ }
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_follow_symlinks=1
