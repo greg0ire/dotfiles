@@ -1,0 +1,4 @@
+/*jslint indent: 4 */
+/*global jQuery, Raphael, window, document, location */
+
+/* vim: set ft=javascript: */
