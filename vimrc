@@ -45,7 +45,9 @@ let g:ctrlp_user_command = ['.git/', 'for i in %s/**/.git; do; a=${i:0:${#i}-4};
 let g:ctrlp_extensions = ['tag']
 
 autocmd FileType less,sass,yml,css,html,php,twig autocmd BufWritePre <buffer> :%s/\s\+$//e
-set grepprg=ack\ --ignore-dir\ cache\ --follow
+autocmd BufRead,BufNewFile /etc/nginx/sites-available/* setf nginx
+
+set grepprg=ack\ --ignore-dir\ cache\ --ignore-dir\ .rsync_cache\ --follow\ --smart-case
 
 " php related stuff
 let php_noShortTags=1
