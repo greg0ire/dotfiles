@@ -49,6 +49,8 @@ autocmd BufRead,BufNewFile /etc/nginx/sites-available/* setf nginx
 
 set grepprg=ack\ --ignore-dir\ cache\ --ignore-dir\ .rsync_cache\ --follow\ --smart-case
 
+set keywordprg=pman
+
 " php related stuff
 let php_noShortTags=1
 set makeprg=php\ -ln\ %
