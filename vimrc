@@ -62,6 +62,9 @@ set smartcase
 set incsearch
 set autoindent
 set gdefault
+
+"clear the highlighting
+nnoremap <leader><space> :noh<cr>
 set cc=80
 
 let g:dbgPavimPort = 9009
