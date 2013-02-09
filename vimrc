@@ -61,6 +61,7 @@ set ignorecase
 set smartcase
 set incsearch
 set autoindent
+set gdefault
 set cc=80
 
 let g:dbgPavimPort = 9009
