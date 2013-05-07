@@ -2,9 +2,9 @@
 	name = Grégoire Paris
 	email = gparis@universcine.com
 [color]
-  branch = auto
-  diff = auto
-  status = auto
+	diff = auto
+	status = auto
+	branch = auto
 	ui = true
 
 [color "branch"]
