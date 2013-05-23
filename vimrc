@@ -52,7 +52,6 @@ set grepprg=ack\ --ignore-dir\ cache\ --ignore-dir\ .rsync_cache\ --follow\ --sm
 set keywordprg=pman
 
 " php related stuff
-let php_noShortTags=1
 set makeprg=php\ -ln\ %
 set errorformat=%m\ in\ %f\ on\ line\ %l
 
