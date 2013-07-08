@@ -59,7 +59,6 @@ cabbr <expr> %% expand('%:p:h')
 set ignorecase
 set smartcase
 set incsearch
-set autoindent
 set gdefault
 
 "clear the highlighting
