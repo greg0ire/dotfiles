@@ -2,10 +2,6 @@ call pathogen#infect()
 set nocompatible
 syntax on
 
-set softtabstop=4
-set shiftwidth=4
-set tabstop=4
-
 set modelines=0
 set encoding=utf-8
 set scrolloff=3
@@ -21,7 +17,7 @@ set backspace=indent,eol,start
 set laststatus=2
 set relativenumber
 set undofile
-set expandtab
+
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 let g:solarized_contrast="high"
