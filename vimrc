@@ -2,10 +2,6 @@ call pathogen#infect()
 set nocompatible
 syntax on
 
-set softtabstop=4
-set shiftwidth=4
-set tabstop=4
-
 set modelines=0
 set encoding=utf-8
 set scrolloff=3
@@ -21,7 +17,7 @@ set backspace=indent,eol,start
 set laststatus=2
 set relativenumber
 set undofile
-set expandtab
+
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 let g:solarized_contrast="high"
@@ -59,7 +55,6 @@ cabbr <expr> %% expand('%:p:h')
 set ignorecase
 set smartcase
 set incsearch
-set autoindent
 set gdefault
 
 "clear the highlighting
@@ -77,6 +72,8 @@ let g:php_cs_fixer_fixers_list = ""             " List of fixers
 let g:php_cs_fixer_enable_default_mapping = 1   " Enable the mapping by default (<leader>pcd)
 let g:php_cs_fixer_dry_run = 0                  " Call command with dry-run option
 let g:php_cs_fixer_verbose = 0                  " Return the output of command if 1, else an inline information.
+
+let g:gitgutter_eager = 0 " Avoid gitgutter lag
 
 " disable noob keys
 nnoremap <up> <nop>
