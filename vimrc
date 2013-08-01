@@ -35,8 +35,6 @@ let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 
 set background=dark
-set laststatus=2 
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 filetype on
 filetype plugin on
 set wildmode=longest,list,full
