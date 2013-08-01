@@ -10,7 +10,6 @@ syntax on
 set modelines=0
 set encoding=utf-8
 set scrolloff=3
-set autoindent
 set showmode
 
 " show commands at the bottom right
