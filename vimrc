@@ -85,6 +85,8 @@ let g:php_cs_fixer_verbose = 0                  " Return the output of command i
 
 let g:gitgutter_eager = 0 " Avoid gitgutter lag
 
+let g:airline_powerline_fonts = 1
+
 " disable noob keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>
