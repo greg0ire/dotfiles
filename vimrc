@@ -35,8 +35,6 @@ let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 
 set background=dark
-set laststatus=2 
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 filetype on
 filetype plugin on
 set wildmode=longest,list,full
@@ -86,6 +84,9 @@ let g:php_cs_fixer_dry_run = 0                  " Call command with dry-run opti
 let g:php_cs_fixer_verbose = 0                  " Return the output of command if 1, else an inline information.
 
 let g:gitgutter_eager = 0 " Avoid gitgutter lag
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
 
 " disable noob keys
 nnoremap <up> <nop>
