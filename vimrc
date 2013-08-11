@@ -71,6 +71,11 @@ set gdefault
 nnoremap <leader><space> :noh<cr>
 set cc=80
 
+" Vim UI {
+    highlight clear SignColumn      " SignColumn should match background for
+                                    " things like vim-gitgutter
+" }
+
 let g:dbgPavimPort = 9009
 let g:dbgPavimBreakAtEntry = 0
 
