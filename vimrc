@@ -77,6 +77,8 @@ set cc=80
     set smartcase
     set wildmode=longest,list,full
     set wildmenu
+    set list
+    set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace "
 " }
 
 let g:dbgPavimPort = 9009
