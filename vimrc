@@ -12,15 +12,10 @@ set encoding=utf-8
 set scrolloff=3
 set showmode
 
-" show commands at the bottom right
-set showcmd
 set hidden
 set visualbell
 set cursorline
 set ttyfast
-set ruler
-set backspace=indent,eol,start
-set laststatus=2
 
 " display line numbers relative to the current line
 set relativenumber
@@ -37,8 +32,6 @@ let g:solarized_visibility="high"
 set background=dark
 filetype on
 filetype plugin on
-set wildmode=longest,list,full
-set wildmenu
 
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/](\.git|\.hg|\.svn|\.settings|\.sass-cache|cache|log|.rsync_cache)$',
@@ -62,8 +55,6 @@ set makeprg=php\ -ln\ %
 set errorformat=%m\ in\ %f\ on\ line\ %l
 
 cabbr <expr> %% expand('%:p:h')
-set ignorecase
-set smartcase
 set incsearch
 set gdefault
 
@@ -74,6 +65,18 @@ set cc=80
 " Vim UI {
     highlight clear SignColumn      " SignColumn should match background for
                                     " things like vim-gitgutter
+    " show commands at the bottom right
+    set showcmd
+    set ruler
+    set laststatus=2
+
+    let g:airline_powerline_fonts = 1
+    let g:airline_theme='solarized'
+    set backspace=indent,eol,start
+    set ignorecase
+    set smartcase
+    set wildmode=longest,list,full
+    set wildmenu
 " }
 
 let g:dbgPavimPort = 9009
@@ -89,9 +92,6 @@ let g:php_cs_fixer_dry_run = 0                  " Call command with dry-run opti
 let g:php_cs_fixer_verbose = 0                  " Return the output of command if 1, else an inline information.
 
 let g:gitgutter_eager = 0 " Avoid gitgutter lag
-
-let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
 
 " Instead of reverting the cursor to the last position in the buffer, we
 " set it to the first line when editing a git commit message
