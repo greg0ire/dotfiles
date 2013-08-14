@@ -43,7 +43,7 @@ let g:ctrlp_user_command = ['.git/', 'for i in %s/**/.git; do; a=${i:0:${#i}-4};
 let g:ctrlp_extensions = ['tag']
 
 " remove trailing spaces
-autocmd FileType less,sass,yml,css,html,php,twig,xml,yaml autocmd BufWritePre <buffer> :call setline(1, map(getline(1,'$'), 'substitute(v:val,"\\s\\+$","","")'))
+autocmd FileType less,sass,yml,css,html,php,twig,xml,yaml,sh autocmd BufWritePre <buffer> :call setline(1, map(getline(1,'$'), 'substitute(v:val,"\\s\\+$","","")'))
 autocmd BufRead,BufNewFile /etc/nginx/* setf nginx
 
 set grepprg=ack\ --ignore-dir\ cache\ --ignore-dir\ .rsync_cache\ --follow\ --smart-case
