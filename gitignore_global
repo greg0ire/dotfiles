@@ -2,4 +2,5 @@
 *.swp
 tags
 .rsync_cache
+.sass-cache
 sleuth.php
