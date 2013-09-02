@@ -39,4 +39,4 @@
 [init]
     templatedir = ~/.git_template
 [hooks "junkchecker"]
-    phrasesfile = .git/hooks/junkchecker.sample
+    phrasesfile = .git/hooks/junkchecker/junk-phrases.sample
