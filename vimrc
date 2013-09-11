@@ -95,6 +95,11 @@ let g:php_cs_fixer_verbose = 0                  " Return the output of command i
 
 let g:gitgutter_eager = 0 " Avoid gitgutter lag
 
+inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u :call PhpInsertUse()<CR>
+inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
+noremap <Leader>e :call PhpExpandClass()<CR>
+
 " Instead of reverting the cursor to the last position in the buffer, we
 " set it to the first line when editing a git commit message
 au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
@@ -113,6 +118,8 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
   inoremap <left> <nop>
   inoremap <right> <nop>
 
+  " @see http://stackoverflow.com/questions/80677/what-is-the-difference-between-c-c-and-c-in-vim
+  inoremap <C-c> <Esc><Esc>
 
   "Make moving around windows faster
   nnoremap <C-h> <C-w>h
