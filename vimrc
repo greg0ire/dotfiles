@@ -38,7 +38,6 @@ let g:ctrlp_custom_ignore = {
   \ }
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_follow_symlinks=1
-let g:ctrlp_user_command = ['.git/', 'for i in %s/**/.git; do; a=${i:0:${#i}-4};b=`echo $a|sed -e "s/\//\\\\\\\\\//g"`;git --git-dir=$a/.git ls-files -oc --exclude-standard |sed -e "s/^/$b/"; done']
 let g:ctrlp_extensions = ['tag']
 
 " remove trailing spaces
