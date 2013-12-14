@@ -7,4 +7,4 @@ prestyle=.less,.sass,.scss
 --type-set
 tpl=.twig
 --type-set
-i18n=.xliff,.xml
+i18n=.xliff,.xml,.xlf

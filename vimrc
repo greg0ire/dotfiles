@@ -41,11 +41,13 @@ let g:ctrlp_follow_symlinks=1
 let g:ctrlp_user_command = ['.git/', 'ack -f %s']
 let g:ctrlp_extensions = ['tag']
 
+set tags+=.git/tags
+
 " remove trailing spaces
 autocmd FileType less,sass,yml,css,html,php,twig,xml,yaml,sh autocmd BufWritePre <buffer> :call setline(1, map(getline(1,'$'), 'substitute(v:val,"\\s\\+$","","")'))
 autocmd BufRead,BufNewFile /etc/nginx/* setf nginx
 
-set grepprg=ack\ --ignore-dir\ cache\ --ignore-dir\ .rsync_cache\ --follow\ --smart-case
+set grepprg=ack\ --ignore-dir\ cache\ --ignore-dir\ .rsync_cache\ --ignore-dir\ web/bundles\ --follow\ --smart-case
 
 set keywordprg=pman
 
@@ -59,7 +61,31 @@ set gdefault
 
 "clear the highlighting
 nnoremap <leader><space> :noh<cr>
-set cc=80
+
+" This rewires n and N to do the highlighing...
+nnoremap <silent> n   n:call HLNext(0.4)<cr>
+nnoremap <silent> N   N:call HLNext(0.4)<cr>
+
+
+function! HLNext (blinktime)
+    highlight RedOnRed ctermfg=red ctermbg=red
+    let [bufnum, lnum, col, off] = getpos('.')
+    let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))
+    echo matchlen
+    let ring_pat = (lnum > 1 ? '\%'.(lnum-1).'l\%>'.max([col-4,1]) .'v\%<'.(col+matchlen+3).'v.\|' : '')
+            \ . '\%'.lnum.'l\%>'.max([col-4,1]) .'v\%<'.col.'v.'
+            \ . '\|'
+            \ . '\%'.lnum.'l\%>'.max([col+matchlen-1,1]) .'v\%<'.(col+matchlen+3).'v.'
+            \ . '\|'
+            \ . '\%'.(lnum+1).'l\%>'.max([col-4,1]) .'v\%<'.(col+matchlen+3).'v.'
+    let ring = matchadd('RedOnRed', ring_pat, 101)
+    redraw
+    exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
+    call matchdelete(ring)
+    redraw
+endfunction
+
+set cc=81
 
 " Vim UI {
     highlight clear SignColumn      " SignColumn should match background for
@@ -125,8 +151,15 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
   nnoremap <C-j> <C-w>j
   nnoremap <C-k> <C-w>k
   nnoremap <C-l> <C-w>l
-
-  " Wrapped lines goes down/up to next row, rather than next line in file.
-  noremap j gj
-  noremap k gk
 " }
+
+"====[ Open any file with a pre-existing swapfile in readonly mode "]=========
+
+    augroup NoSimultaneousEdits
+        autocmd!
+        autocmd SwapExists * let v:swapchoice = 'o'
+        autocmd SwapExists * echomsg ErrorMsg
+        autocmd SwapExists * echo 'Duplicate edit session (readonly)'
+        autocmd SwapExists * echohl None
+        autocmd SwapExists * sleep 2
+    augroup END
