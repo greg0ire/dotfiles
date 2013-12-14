@@ -60,7 +60,7 @@ set gdefault
 
 "clear the highlighting
 nnoremap <leader><space> :noh<cr>
-set cc=80
+set cc=81
 
 " Vim UI {
     highlight clear SignColumn      " SignColumn should match background for
