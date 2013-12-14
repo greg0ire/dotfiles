@@ -25,7 +25,6 @@ set undofile
 
 colorscheme solarized
 let g:solarized_termtrans=1
-let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 
@@ -42,11 +41,13 @@ let g:ctrlp_follow_symlinks=1
 let g:ctrlp_user_command = ['.git/', 'for i in %s/**/.git; do; a=${i:0:${#i}-4};b=`echo $a|sed -e "s/\//\\\\\\\\\//g"`;git --git-dir=$a/.git ls-files -oc --exclude-standard |sed -e "s/^/$b/"; done']
 let g:ctrlp_extensions = ['tag']
 
+set tags+=.git/tags
+
 " remove trailing spaces
 autocmd FileType less,sass,yml,css,html,php,twig,xml,yaml,sh autocmd BufWritePre <buffer> :call setline(1, map(getline(1,'$'), 'substitute(v:val,"\\s\\+$","","")'))
 autocmd BufRead,BufNewFile /etc/nginx/* setf nginx
 
-set grepprg=ack\ --ignore-dir\ cache\ --ignore-dir\ .rsync_cache\ --follow\ --smart-case
+set grepprg=ack\ --ignore-dir\ cache\ --ignore-dir\ .rsync_cache\ --ignore-dir\ web/bundles\ --follow\ --smart-case
 
 set keywordprg=pman
 
@@ -150,10 +151,6 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
   nnoremap <C-j> <C-w>j
   nnoremap <C-k> <C-w>k
   nnoremap <C-l> <C-w>l
-
-  " Wrapped lines goes down/up to next row, rather than next line in file.
-  noremap j gj
-  noremap k gk
 " }
 
 "====[ Open any file with a pre-existing swapfile in readonly mode "]=========
