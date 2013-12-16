@@ -59,6 +59,7 @@ cabbr <expr> %% expand('%:p:h')
 set incsearch
 set gdefault
 
+set hlsearch
 "clear the highlighting
 nnoremap <leader><space> :noh<cr>
 
