@@ -151,6 +151,8 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
   nnoremap <C-j> <C-w>j
   nnoremap <C-k> <C-w>k
   nnoremap <C-l> <C-w>l
+
+  let mapleader = " "
 " }
 
 "====[ Open any file with a pre-existing swapfile in readonly mode "]=========
