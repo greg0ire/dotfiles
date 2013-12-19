@@ -61,7 +61,7 @@ set gdefault
 
 set hlsearch
 "clear the highlighting
-let mapleader = " "
+let mapleader = "ç"
 nnoremap <leader><space> :noh<cr>
 
 " This rewires n and N to do the highlighing...
