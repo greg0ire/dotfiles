@@ -8,3 +8,5 @@ prestyle=.less,.sass,.scss
 tpl=.twig
 --type-set
 i18n=.xliff,.xml,.xlf
+--type-set
+doc=.md,.rst
