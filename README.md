@@ -1,3 +1,5 @@
 ## Requirements
 
+- zsh
+- git
 - most
