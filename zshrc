@@ -146,6 +146,7 @@ function gitbranch()
   done
 }
 alias ack=ack-grep
+alias vi=vim
 export PAGER=most
 export EDITOR=vi
 
