@@ -46,7 +46,7 @@ plugins=(git svn extract symfony2 ssh-agent composer bower)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/home/greg/bin:/usr/local/sbin:/usr/sbin:/sbin
+export PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/home/greg/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/greg/src/shunit2
 alias -s avi=vlc
 alias vi=vim
 alias vim=vimx
