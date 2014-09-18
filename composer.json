@@ -3,7 +3,8 @@
         "phpunit/phpunit": "~4.1",
         "fabpot/php-cs-fixer": "~0.5",
         "sismo/sismo": "~1.0",
-        "squizlabs/php_codesniffer": "~1.5"
+        "squizlabs/php_codesniffer": "~1.5",
+        "phpmd/phpmd": "~2.0"
     },
     "config": {
         "bin-dir": "/home/greg/bin"
