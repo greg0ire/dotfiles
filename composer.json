@@ -7,6 +7,6 @@
         "phpmd/phpmd": "~2.0"
     },
     "config": {
-        "bin-dir": "/home/users/gparis/bin"
+        "bin-dir": "$HOME/bin"
     }
 }
