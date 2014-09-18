@@ -47,5 +47,6 @@
 [hooks]
 	enabled-plugins = wipchecker
 	enabled-plugins = junkchecker
+	enabled-plugins = syntaxchecker
 [hooks "composer"]
 	onChange = just_warn
