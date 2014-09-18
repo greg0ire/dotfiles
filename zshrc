@@ -46,7 +46,7 @@ plugins=(git svn extract symfony symfony2 ssh-agent composer bower)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/home/users/gparis/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/users/gparis/.local/bin
+export PATH=/home/users/gparis/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/users/gparis/.local/bin:~/src/shunit2
 alias ack=ack-grep
 alias vi=vim
 export PAGER=most
