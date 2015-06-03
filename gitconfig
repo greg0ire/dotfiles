@@ -49,3 +49,5 @@
 	enabled-plugins = junkchecker
 [hooks "php-ctags"]
 	tag-kinds = cfivt
+[hooks "composer"]
+	onChange = just_warn
