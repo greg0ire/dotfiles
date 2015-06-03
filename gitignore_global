@@ -1,5 +1,6 @@
 *~
 *.swp
+*.swo
 tags
 .rsync_cache
 .sass-cache
