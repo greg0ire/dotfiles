@@ -55,6 +55,9 @@ source ~/dev/switch/switch.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export EDITOR=vim
 export PAGER=most
+
 autoload fancy-ctrl-z
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
+
+source /home/users/gparis/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
