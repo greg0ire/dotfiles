@@ -41,7 +41,7 @@ ZSH_THEME="random"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn extract symfony symfony2 ssh-agent composer bower docker)
+plugins=(git svn extract symfony symfony2 ssh-agent composer bower docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -65,3 +65,4 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
 source /home/users/gparis/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
