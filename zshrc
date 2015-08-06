@@ -61,3 +61,4 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
 source /home/users/gparis/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
