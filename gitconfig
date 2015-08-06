@@ -48,3 +48,5 @@
 	tag-kinds = cfivt
 [hooks "composer"]
 	onChange = just_warn
+[rebase]
+	autosquash = true
