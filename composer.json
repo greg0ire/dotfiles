@@ -1,9 +1,12 @@
 {
     "require": {
-        "phpunit/phpunit": "~4.1",
-        "fabpot/php-cs-fixer": "~0.5",
+        "asm89/twig-lint": "^1.0.1",
+        "fabpot/php-cs-fixer": "~1.0",
+        "fabpot/php-cs-fixer": "^1.9.1",
         "sismo/sismo": "~1.0",
-        "squizlabs/php_codesniffer": "~1.5"
+        "squizlabs/php_codesniffer": "~1.5",
+        "phpmd/phpmd": "~2.0",
+        "phing/phing": "~2.9"
     },
     "config": {
         "bin-dir": "$HOME/bin"
