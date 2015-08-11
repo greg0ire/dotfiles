@@ -125,6 +125,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 bindsym $mod+Ctrl+l exec i3lock
 
+bindsym $mod+KP_Subtract exec --no-startup-id /usr/bin/amixer set Master 1-
+bindsym $mod+KP_Add exec --no-startup-id /usr/bin/amixer set Master 1+
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
