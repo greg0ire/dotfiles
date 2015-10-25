@@ -45,7 +45,7 @@
 	enabled-plugins = wipchecker
 	enabled-plugins = junkchecker
 [hooks "php-ctags"]
-	tag-kinds = cfivt
+	tag-kinds = cfit
 [hooks "composer"]
 	onChange = just_warn
 [rebase]
