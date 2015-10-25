@@ -62,3 +62,4 @@ bindkey '^Z' fancy-ctrl-z
 
 source ~/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='(ag -l -g "" ; ag -l -g "" vendor)'
