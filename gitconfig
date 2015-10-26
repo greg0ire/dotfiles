@@ -48,7 +48,7 @@
 [hooks "composer"]
 	onChange = just_warn
 [hooks "php-ctags"]
-	tag-kinds = cfivt
+	tag-kinds = cfit
 [hooks "composer"]
 	onChange = just_warn
 [rebase]

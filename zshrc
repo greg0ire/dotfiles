@@ -41,7 +41,7 @@ ZSH_THEME="strug"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn extract symfony symfony2 ssh-agent composer bower docker docker-compose)
+plugins=(git svn extract ssh-agent docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -66,3 +66,4 @@ bindkey '^Z' fancy-ctrl-z
 
 source ~/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='(ag -l -g "" ; ag -l -g "" vendor)'
