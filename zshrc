@@ -55,6 +55,9 @@ export EDITOR=vi
 bindkey -e
 bindkey "5C" forward-word
 bindkey "5D" backward-word
+source ~/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='(ag -l -g "" ; ag -l -g "" vendor)'
 source ~/dev/switch/switch.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export EDITOR=vim
@@ -64,6 +67,3 @@ autoload fancy-ctrl-z
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
-source ~/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='(ag -l -g "" ; ag -l -g "" vendor)'
