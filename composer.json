@@ -1,7 +1,6 @@
 {
     "require": {
         "asm89/twig-lint": "^1.0.1",
-        "fabpot/php-cs-fixer": "~1.0",
         "fabpot/php-cs-fixer": "^1.9.1",
         "sismo/sismo": "~1.0",
         "squizlabs/php_codesniffer": "~2.3",
