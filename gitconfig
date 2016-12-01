@@ -50,3 +50,4 @@
 	onChange = just_warn
 [rebase]
 	autosquash = true
+	autostash = true
