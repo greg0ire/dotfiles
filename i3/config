@@ -160,4 +160,8 @@ bar {
         status_command i3status
 }
 
+workspace 1 output DP-1
+workspace 10 output DVI-I-1
+
 exec --no-startup-id feh --bg-fill .i3/current_wallpaper
+exec --no-startup-id xrandr --output DP-1 --auto --left-of DVI-I-1
