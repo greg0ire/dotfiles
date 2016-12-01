@@ -38,7 +38,7 @@
 [hooks "junkchecker"]
 	phrasesfile = /home/users/gparis/.dotfiles/junk_phrases
 [hooks "php-sismo"]
-	path = /home/users/gparis/bin/sismo
+	path = $HOME/bin/sismo
 [hooks "notification"]
 	notifier = notify-send
 [hooks]
