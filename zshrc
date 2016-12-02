@@ -46,13 +46,11 @@ plugins=(git svn extract ssh-agent docker docker-compose)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/home/users/gparis/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/users/gparis/.local/bin:~/src/shunit2
-alias ack=ack-grep
 alias vi=vim
 export PAGER=most
 export EDITOR=vi
-
 bindkey -e
+export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/.local/bin:$HOME/src/shunit2
 bindkey "5C" forward-word
 bindkey "5D" backward-word
 source ~/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
