@@ -47,8 +47,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 alias vi=vim
-export PAGER=most
-export EDITOR=vi
 bindkey -e
 export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/.local/bin:$HOME/src/shunit2
 bindkey "5C" forward-word
