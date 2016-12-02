@@ -36,7 +36,7 @@
 [init]
 	templatedir = ~/.git_template/template
 [hooks "junkchecker"]
-	phrasesfile = /home/users/gparis/.dotfiles/junk_phrases
+	phrasesfile = $HOME/.dotfiles/junk_phrases
 [hooks "php-sismo"]
 	path = $HOME/bin/sismo
 [hooks "notification"]
@@ -53,3 +53,6 @@
 	onChange = just_warn
 [rebase]
 	autosquash = true
+	autostash = true
+[commit]
+	gpgsign = true

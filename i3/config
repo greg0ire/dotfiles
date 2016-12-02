@@ -121,7 +121,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec i3-msg exit
 
 bindsym $mod+Ctrl+l exec i3lock
 
@@ -151,6 +151,14 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+mode "launch" {
+    bindsym f exec firefox          ; mode "default"
+    bindsym t exec thunderbird      ; mode "default"
+
+    bindsym Escape mode "default"
+}
+bindsym $mod+Tab mode "launch"
 
 bindsym $mod+r mode "resize"
 
