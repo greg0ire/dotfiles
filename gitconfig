@@ -1,6 +1,5 @@
 [user]
 	name = Grégoire Paris
-	email = gparis@universcine.com
 [color]
 	diff = auto
 	status = auto
@@ -53,3 +52,5 @@
 	autostash = true
 [commit]
 	gpgsign = true
+[include]
+	path = ~/.dotfiles/git_local_config
