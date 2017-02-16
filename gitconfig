@@ -56,3 +56,4 @@
 	autostash = true
 [commit]
 	gpgsign = true
+	template = ~/.dotfiles/git_commit_msg
