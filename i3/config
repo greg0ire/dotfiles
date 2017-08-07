@@ -174,3 +174,4 @@ workspace 1 output $leftScreen
 workspace 10 output $rightScreen
 
 exec --no-startup-id feh --bg-fill .i3/current_wallpaper
+exec setxkbmap gb intlextd
