@@ -35,7 +35,7 @@
 [init]
 	templatedir = ~/.git_template/template
 [hooks "junkchecker"]
-	phrasesfile = $HOME/.dotfiles/junk_phrases
+	phrasesfile = /home/gparis/.dotfiles/junk_phrases
 [hooks "php-sismo"]
 	path = $HOME/bin/sismo
 [hooks "notification"]
