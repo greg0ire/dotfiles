@@ -56,5 +56,7 @@
 [commit]
 	gpgsign = true
 	template = ~/.dotfiles/git_commit_msg
+[branch]
+	autosetuprebase = always
 [include]
 	path = ~/.dotfiles/git_local_config
