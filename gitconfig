@@ -27,7 +27,7 @@
 	keepBackup = false
 	tool = vimdiff
 [core]
-	editor = nvim
+	editor = vim
 	pager = most
 	excludesfile = ~/.gitignore_global
 [push]
