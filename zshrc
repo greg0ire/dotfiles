@@ -41,7 +41,7 @@ ZSH_THEME="strug"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn extract ssh-agent docker docker-compose)
+plugins=(git svn extract ssh-agent docker docker-compose vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -49,8 +49,6 @@ source $ZSH/oh-my-zsh.sh
 alias vi=vim
 bindkey "^[OF" end-of-line
 bindkey "^[OH" beginning-of-line
-
-bindkey -e
 export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/.local/bin:$HOME/src/shunit2
 bindkey "5C" forward-word
 bindkey "5D" backward-word
