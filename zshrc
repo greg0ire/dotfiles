@@ -49,6 +49,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/home/greg/bin:/usr/local/sbin:/usr/sbin:/sbin
 alias -s avi=vlc
 alias vi=vim
+alias cat="~/.cargo/bin/bat --plain"
+alias less=~/.cargo/bin/bat
 bindkey "^[OF" end-of-line
 bindkey "^[OH" beginning-of-line
 
@@ -64,6 +66,8 @@ source ~/dev/switch/switch.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export EDITOR=vim
 export PAGER=most
+export BAT_THEME='OneHalfDark'
+export BAT_PAGER=less
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 source ~/.zplug/init.zsh
