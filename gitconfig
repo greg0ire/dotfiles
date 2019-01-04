@@ -52,7 +52,6 @@
 	autostash = true
 [commit]
 	gpgsign = true
-	template = ~/.dotfiles/git_commit_msg
 [include]
 	path = ~/.dotfiles/git_local_config
 [rerere]
