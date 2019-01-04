@@ -60,7 +60,7 @@ export EDITOR=vi
 bindkey -e
 bindkey "5C" forward-word
 bindkey "5D" backward-word
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh
 export FZF_DEFAULT_COMMAND='(ag -l -g "" ; ag -l -g "" vendor)'
 source ~/dev/switch/switch.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
