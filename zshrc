@@ -41,7 +41,7 @@ ZSH_THEME="strug"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn extract ssh-agent docker docker-compose)
+plugins=(git svn extract ssh-agent docker docker-compose fancy-ctrl-z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -64,10 +64,6 @@ source ~/dev/switch/switch.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export EDITOR=vim
 export PAGER=most
-
-autoload fancy-ctrl-z
-zle -N fancy-ctrl-z
-bindkey '^Z' fancy-ctrl-z
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 source ~/.zplug/init.zsh
