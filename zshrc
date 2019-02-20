@@ -77,3 +77,7 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug load
 
 bindkey '^ ' autosuggest-accept
+
+if [[ -f ~/.zshrc.local ]]; then
+    source ~/.zshrc.local
+fi
