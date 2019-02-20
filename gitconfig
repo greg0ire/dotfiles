@@ -41,7 +41,6 @@
 [hooks "notification"]
 	notifier = notify-send
 [hooks]
-	enabled-plugins = wipchecker
 	enabled-plugins = junkchecker
 [hooks "php-ctags"]
 	tag-kinds = cfit
