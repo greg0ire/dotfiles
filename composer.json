@@ -1,7 +1,6 @@
 {
     "require": {
         "asm89/twig-lint": "^1.0.1",
-        "friendsofphp/php-cs-fixer": "^1.9.1",
         "phing/phing": "~2.9",
         "phpmd/phpmd": "~2.0",
         "sismo/sismo": "~1.0",

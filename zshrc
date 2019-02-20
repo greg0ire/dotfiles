@@ -41,7 +41,7 @@ ZSH_THEME="strug"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn extract ssh-agent docker docker-compose)
+plugins=(git svn extract ssh-agent docker docker-compose fancy-ctrl-z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -49,21 +49,28 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/home/greg/bin:/usr/local/sbin:/usr/sbin:/sbin
 alias -s avi=vlc
 alias vi=vim
+alias cat="~/.cargo/bin/bat --plain"
+alias less=~/.cargo/bin/bat
 bindkey "^[OF" end-of-line
 bindkey "^[OH" beginning-of-line
 
 bindkey -e
 bindkey "5C" forward-word
 bindkey "5D" backward-word
-source ~/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='(ag -l -g "" ; ag -l -g "" vendor)'
+[ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh
+export FZF_DEFAULT_COMMAND='(rg --files ; rg --files vendor)'
 source ~/dev/switch/switch.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export EDITOR=vim
 export PAGER=most
+export BAT_THEME='OneHalfDark'
+export BAT_PAGER=less
 
-autoload fancy-ctrl-z
-zle -N fancy-ctrl-z
-bindkey '^Z' fancy-ctrl-z
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
+source ~/.zplug/init.zsh
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:3
+zplug load
 
+bindkey '^ ' autosuggest-accept
