@@ -54,9 +54,6 @@ alias less=~/.cargo/bin/bat
 bindkey "^[OF" end-of-line
 bindkey "^[OH" beginning-of-line
 
-export PAGER=most
-export EDITOR=vi
-
 bindkey -e
 bindkey "5C" forward-word
 bindkey "5D" backward-word

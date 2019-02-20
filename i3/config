@@ -152,6 +152,14 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+mode "launch" {
+    bindsym f exec firefox          ; mode "default"
+    bindsym t exec thunderbird      ; mode "default"
+
+    bindsym Escape mode "default"
+}
+bindsym $mod+Tab mode "launch"
+
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status

@@ -1,12 +1,14 @@
 {
     "require": {
         "asm89/twig-lint": "^1.0.1",
+        "phing/phing": "~2.9",
+        "phpmd/phpmd": "~2.0",
         "sismo/sismo": "~1.0",
         "squizlabs/php_codesniffer": "~2.3",
-        "phpmd/phpmd": "~2.0",
-        "phing/phing": "~2.9"
+        "willdurand/pman": "dev-master"
     },
     "config": {
-        "bin-dir": "$HOME/bin"
+        "bin-dir": "$HOME/bin",
+        "sort-packages": true
     }
 }
