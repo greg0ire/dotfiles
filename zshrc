@@ -58,7 +58,6 @@ export EDITOR=vi
 bindkey -e
 bindkey "5C" forward-word
 bindkey "5D" backward-word
-source ~/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='(ag -l -g "" ; ag -l -g "" vendor)'
 source ~/dev/switch/switch.sh
@@ -70,3 +69,11 @@ autoload fancy-ctrl-z
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
+source ~/.zplug/init.zsh
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:3
+zplug load
+
+bindkey '^ ' autosuggest-accept
