@@ -49,6 +49,8 @@
 [rebase]
 	autosquash = true
 	autostash = true
+	abbreviateCommands = true
+	missingCommitsCheck = warn
 [commit]
 	gpgsign = true
 [include]
