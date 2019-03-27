@@ -61,12 +61,15 @@ export BAT_THEME='OneHalfDark'
 export BAT_PAGER=less
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
-source ~/.zplug/init.zsh
-zplug 'Ehres/ehres-zsh', as:theme, use:themes/ehres.zsh-theme
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:3
-zplug load
+
+source <(antibody init)
+antibody bundle <<EOF
+robbyrussell/oh-my-zsh path:lib
+Ehres/ehres-zsh path:themes
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+zsh-users/zsh-syntax-highlighting
+EOF
 
 bindkey '^ ' autosuggest-accept
 
