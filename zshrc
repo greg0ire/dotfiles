@@ -51,8 +51,6 @@ bindkey "^[OH" beginning-of-line
 bindkey -e
 bindkey "5C" forward-word
 bindkey "5D" backward-word
-[ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh
-export FZF_DEFAULT_COMMAND='(rg --files ; rg --files vendor)'
 source ~/dev/switch/switch.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export EDITOR=vim
@@ -70,6 +68,8 @@ zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 zsh-users/zsh-syntax-highlighting
 EOF
+[ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh
+export FZF_DEFAULT_COMMAND='(rg --files ; rg --files vendor)'
 
 bindkey '^ ' autosuggest-accept
 
