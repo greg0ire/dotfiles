@@ -51,6 +51,7 @@
 	autostash = true
 	abbreviateCommands = true
 	missingCommitsCheck = warn
+	instructionFormat = [%an @ %ar] %s
 [commit]
 	gpgsign = true
 [include]
