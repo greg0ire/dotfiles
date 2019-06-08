@@ -35,7 +35,7 @@
 [init]
 	templatedir = ~/.git_template/template
 [hooks "junkchecker"]
-	phrasesfile = $HOME/.dotfiles/junk_phrases
+	phrasesfile = $HOME/.junk_phrases
 [hooks "php-sismo"]
 	path = /usr/share/nginx/html/sismo.php
 [hooks "notification"]
@@ -55,6 +55,6 @@
 [commit]
 	gpgsign = true
 [include]
-	path = ~/.dotfiles/git_local_config
+	path = ~/.gitconfig.local
 [rerere]
 	enabled = true

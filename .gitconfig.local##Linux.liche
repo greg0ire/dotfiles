@@ -1,0 +1,5 @@
+[user]
+	signingkey = 12B116BF
+	email = postmaster@greg0ire.fr
+[gpg]
+	program = gpg2
