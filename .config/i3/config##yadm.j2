@@ -128,8 +128,9 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 {% if YADM_HOSTNAME == 'liche' -%}
-assign [class="Thunderbird"] $workspace2
 assign [class="Firefox"] $workspace1
+assign [class="Thunderbird"] $workspace2
+assign [class="Popcorn-Time"] $workspace3
 {% else -%}
 assign [class="Thunderbird"] $workspace1
 assign [class="Firefox"] $workspace1
