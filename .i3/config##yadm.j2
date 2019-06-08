@@ -5,6 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -24,7 +25,7 @@ font pango:monospace 8
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
 # X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
+# font, it does not scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -92,10 +93,20 @@ bindsym $mod+q focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+{% if YADM_HOSTNAME == 'liche' -%}
+set $workspace1 "1: Home"
+set $workspace2 "2: Mail"
+set $workspace3 "3: Movies"
+{% else -%}
+set $workspace1 "1: Mail"
+set $workspace2 "2: Code"
+set $workspace3 "3: World Wide Web"
+{% endif -%}
+
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
@@ -105,9 +116,9 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
@@ -115,6 +126,14 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+
+{% if YADM_HOSTNAME == 'liche' -%}
+assign [class="Thunderbird"] $workspace2
+assign [class="Firefox"] $workspace1
+{% else -%}
+assign [class="Thunderbird"] $workspace1
+assign [class="Firefox"] $workspace1
+{% endif -%}
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -132,10 +151,10 @@ bindsym $mod+KP_Add exec --no-startup-id /usr/bin/amixer set Master 1+
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
+        # Pressing left will shrink the window's width.
+        # Pressing right will grow the window's width.
+        # Pressing up will shrink the window's height.
+        # Pressing down will grow the window's height.
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
