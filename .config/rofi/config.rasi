@@ -1,0 +1,5 @@
+configuration {
+	lines: 5;
+	theme: "solarized";
+	font: "sans 16";
+}
