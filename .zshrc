@@ -43,8 +43,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:$HOME/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/.cargo/bin/
 alias -s avi=vlc
 alias vi=vim
-alias cat="~/.cargo/bin/bat --plain"
-alias less=~/.cargo/bin/bat
+alias cat="bat --plain"
+alias less=bat
 bindkey "^[OF" end-of-line
 bindkey "^[OH" beginning-of-line
 
