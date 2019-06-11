@@ -69,6 +69,7 @@ zsh-users/zsh-completions
 zsh-users/zsh-syntax-highlighting
 EOF
 [ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 export FZF_DEFAULT_COMMAND='(rg --files ; rg --files vendor)'
 
 bindkey '^ ' autosuggest-accept
