@@ -1,2 +1,11 @@
 code_transform.class_new.variants:
   final: final
+  "PHPUnit test": phpunit_test
+
+navigator.destinations:
+  source: src/<kernel>.php
+  "PHPUnit test": tests/<kernel>Test.php
+
+navigator.autocreate:
+  source: final
+  "PHPUnit test": "PHPUnit test"

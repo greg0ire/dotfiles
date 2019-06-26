@@ -1,0 +1,19 @@
+<?php
+
+declare(strict_types=1);
+{% if prototype.namespace|length %}
+
+namespace {{ prototype.namespace }};
+{% endif %}
+
+use PHPUnit\Framework\TestCase;
+{% for interface in prototype.interfaces %}
+
+{{ generator.render(interface, variant)|raw }}
+{% endfor %}
+{% for class in prototype.classes %}
+
+final class {{ class.name }} extends TestCase
+{
+}
+{% endfor %}
