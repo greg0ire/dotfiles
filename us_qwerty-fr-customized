@@ -1,0 +1,15 @@
+
+// qwerty-fr:
+
+partial alphanumeric_keys 
+xkb_symbols "qwerty-fr-customized"
+{
+    include "us_qwerty-fr(qwerty-fr)"
+
+    key <AB10> { [ slash,        question,    0x01002E2E,      ellipsis    ] };
+    key <AD08> { [ i,            I,           U1F605,          U1F61B      ] }; // 😅 😛
+    key <AC06> { [ h,            H,           U1F4A9,          U1F44D      ] }; // 💩 👍
+    key <LSGT> { [ backslash,    bar,         lessthanequal,   greaterthanequal ] };
+
+};
+

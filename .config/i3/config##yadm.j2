@@ -185,7 +185,7 @@ exec --no-startup-id start_conky_maia
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec_always "setxkbmap gb intlextd"
+exec_always "setxkbmap -model pc105 -layout us_qwerty-fr-customized"
 {% endif -%}
 
 
@@ -206,9 +206,7 @@ bar {
 }
 
 exec --no-startup-id feh --bg-fill .config/i3/current_wallpaper
-{% if YADM_HOSTNAME == 'liche' -%}
-exec --no-startup-id setxkbmap -model pc105 -layout gb -variant intlextd
-{% else -%}
+{% if YADM_HOSTNAME != 'liche' -%}
 #############################
 ### settings for i3-gaps: ###
 #############################
