@@ -64,6 +64,7 @@ source <(antibody init)
 antibody bundle <<EOF
 robbyrussell/oh-my-zsh path:lib
 Ehres/ehres-zsh path:themes
+zdharma/zsh-diff-so-fancy
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 zsh-users/zsh-syntax-highlighting

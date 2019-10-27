@@ -28,7 +28,7 @@
 	tool = vimdiff
 [core]
 	editor = vim
-	pager = most
+	pager = diff-so-fancy | less -FXRi
 	excludesfile = ~/.gitignore_global
 [push]
 	default = simple
