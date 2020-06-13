@@ -1,10 +1,8 @@
 {
     "require": {
-        "asm89/twig-lint": "^1.0.1",
-        "phing/phing": "~2.9",
-        "phpmd/phpmd": "~2.0",
-        "sismo/sismo": "~1.0",
-        "squizlabs/php_codesniffer": "~2.3",
+        "phing/phing": "@stable",
+        "phpmd/phpmd": "@stable",
+        "squizlabs/php_codesniffer": "@stable",
         "willdurand/pman": "dev-master"
     },
     "config": {
