@@ -3,3 +3,5 @@
 	email = postmaster@greg0ire.fr
 [gpg]
 	program = gpg2
+[remote]
+	pushdefault = fork
