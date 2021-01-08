@@ -2,4 +2,6 @@ configuration {
 	lines: 5;
 	theme: "solarized";
 	font: "sans 16";
+	modi: "window,drun,run,combi";
+	combi-modi: "window,drun,run";
 }
