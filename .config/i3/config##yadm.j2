@@ -47,7 +47,6 @@ bindsym $mod+d exec rofi -show run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 #
-exec --no-startup-id volumeicon
 
 # change focus
 bindsym $mod+h focus left
@@ -188,6 +187,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id autorandr --change
+exec --no-startup-id pa-applet
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
@@ -195,6 +195,8 @@ exec --no-startup-id start_conky_maia
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+{% else %}
+exec --no-startup-id volumeicon
 {% endif -%}
 exec_always "setxkbmap -model pc105 -layout us_qwerty-fr-customized"
 
