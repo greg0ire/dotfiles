@@ -42,6 +42,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 path+=("$HOME/bin")
 path+=("$HOME/.cargo/bin")
+path+=("$HOME/.local/bin")
 alias -s avi=vlc
 alias vi=vim
 alias cat="bat --plain"
