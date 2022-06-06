@@ -40,7 +40,8 @@ plugins=(git extract ssh-agent gpg-agent docker docker-compose fancy-ctrl-z)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:$HOME/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/.cargo/bin/
+path+=("$HOME/bin")
+path+=("$HOME/.cargo/bin")
 alias -s avi=vlc
 alias vi=vim
 alias cat="bat --plain"
