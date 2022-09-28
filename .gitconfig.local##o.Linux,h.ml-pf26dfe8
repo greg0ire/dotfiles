@@ -1,0 +1,6 @@
+[user]
+	signingkey = 6CE0C6A7B0858F70
+	email = gregoire.paris@manomano.com
+
+[url "ssh://git@git.manomano.tech/"]
+	insteadOf = https://git.manomano.tech/
