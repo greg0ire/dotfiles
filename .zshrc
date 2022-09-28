@@ -44,7 +44,7 @@ path+=("$HOME/bin")
 path+=("$HOME/.cargo/bin")
 path+=("$HOME/.local/bin")
 alias -s avi=vlc
-alias vi=vim
+alias vi=nvim
 alias cat="bat --plain"
 alias less=bat
 bindkey "^[OF" end-of-line
@@ -55,7 +55,7 @@ bindkey "5C" forward-word
 bindkey "5D" backward-word
 source ~/dev/switch/switch.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=most
 export BAT_THEME='OneHalfDark'
 export BAT_PAGER=less

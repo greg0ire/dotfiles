@@ -25,9 +25,9 @@
 
 [merge]
 	keepBackup = false
-	tool = vimdiff
+	tool = nvimdiff
 [core]
-	editor = vim
+	editor = nvim
 	pager = diff-so-fancy | less -FXRi
 	excludesfile = ~/.gitignore_global
 [push]
