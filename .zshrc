@@ -62,14 +62,9 @@ export BAT_PAGER=less
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 
-source <(antibody init)
-antibody bundle <<EOF
-robbyrussell/oh-my-zsh path:lib
-Ehres/ehres-zsh path:themes
-z-shell/zsh-diff-so-fancy
-zsh-users/zsh-autosuggestions
-zsh-users/zsh-completions
-EOF
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+antidote load
+
 [ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 export FZF_DEFAULT_COMMAND='(rg --files ; rg --files vendor)'

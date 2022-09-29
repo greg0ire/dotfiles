@@ -1,0 +1,5 @@
+robbyrussell/oh-my-zsh path:lib
+Ehres/ehres-zsh path:themes
+z-shell/zsh-diff-so-fancy
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
