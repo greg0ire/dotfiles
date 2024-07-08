@@ -24,6 +24,7 @@
 	untracked = cyan
 
 [merge]
+	conflictstyle = diff3
 	keepBackup = false
 	tool = nvimdiff
 [core]
