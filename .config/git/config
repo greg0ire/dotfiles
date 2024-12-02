@@ -30,7 +30,7 @@
 [core]
 	editor = nvim
 	pager = delta
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/.config/git/ignore
 [interactive]
 	diffFilter = delta --color-only
 [push]
@@ -69,3 +69,5 @@
 	fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
 [tag]
 	sort = -version:refname
+[fetch]
+	prune = true

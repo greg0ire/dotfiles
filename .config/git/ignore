@@ -5,3 +5,7 @@ tags
 .sass-cache
 sleuth.php
 .phpactor.json
+.mise.toml
+kls_database.db
+.vscode
+cover.cov
