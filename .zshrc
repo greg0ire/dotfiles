@@ -71,6 +71,26 @@ export FZF_DEFAULT_COMMAND='(rg --files ; rg --files vendor)'
 
 bindkey '^ ' autosuggest-accept
 
+__insert_hash () {
+    git log -n 50 --pretty=format:'%h %s' --no-merges | fzf --reverse --multi | cut -c -7 | while read -r item; do
+        echo -n -E "${item} "
+    done
+    local ret=$?
+    echo
+    return $ret
+}
+
+fzf-git-widget() {
+  LBUFFER="${LBUFFER}$(__insert_hash)"
+  local ret=$?
+  zle reset-prompt
+  return $ret
+}
+
+zle -N fzf-git-widget
+bindkey '^X^G' fzf-git-widget
+
 if [[ -f ~/.zshrc.local ]]; then
     source ~/.zshrc.local
 fi
+eval "$(/home/gregoire/.local/bin/mise activate zsh)"
