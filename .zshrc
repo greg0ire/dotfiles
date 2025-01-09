@@ -93,4 +93,3 @@ bindkey '^X^G' fzf-git-widget
 if [[ -f ~/.zshrc.local ]]; then
     source ~/.zshrc.local
 fi
-eval "$(/home/gregoire/.local/bin/mise activate zsh)"
