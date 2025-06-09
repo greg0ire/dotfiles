@@ -1,0 +1,6 @@
+fzf-git-widget() {
+  LBUFFER="${LBUFFER}$(__insert_hash)"
+  local ret=$?
+  zle reset-prompt
+  return $ret
+}

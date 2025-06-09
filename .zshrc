@@ -71,20 +71,18 @@ export FZF_DEFAULT_COMMAND='(rg --files ; rg --files vendor)'
 
 bindkey '^ ' autosuggest-accept
 
-__insert_hash () {
-    git log -n 50 --pretty=format:'%h %s' --no-merges | fzf --reverse --multi | cut -c -7 | while read -r item; do
-        echo -n -E "${item} "
-    done
-    local ret=$?
-    echo
-    return $ret
-}
+() {
+    # add our local functions dir to the fpath
+    local funcs=$HOME/.config/zsh/functions
 
-fzf-git-widget() {
-  LBUFFER="${LBUFFER}$(__insert_hash)"
-  local ret=$?
-  zle reset-prompt
-  return $ret
+    # FPATH is already tied to fpath, but this adds
+    # a uniqueness constraint to prevent duplicate entries
+    typeset -TUg +x FPATH=$funcs:$FPATH fpath
+
+    # Now autoload them
+    if [[ -d $funcs ]]; then
+        autoload ${=$(cd "$funcs" && echo *)}
+    fi
 }
 
 zle -N fzf-git-widget
