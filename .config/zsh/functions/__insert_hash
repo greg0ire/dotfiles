@@ -1,5 +1,5 @@
 __insert_hash () {
-    git log -n 50 --pretty=format:'%h %s' --no-merges|\
+    git log -n 50 --pretty=format:'%h %s' --no-merges $RBUFFER|\
         fzf --reverse --multi'|\
         cut -c -7 |\
         while read -r item; do
